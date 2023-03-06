@@ -1,0 +1,91 @@
+/* specify formatting of the map contained in the class "map" */
+.map {
+    position: absolute;
+    top: 50px; /* place map below navbar */
+    bottom: 0;
+    width: 100%; /* fill entire width of screen with map */
+}
+
+/* specify formatting of section including geocoder and return button contained in the class "map-overlay-search" */
+.map-overlay-search {
+    position: relative;
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    top: 0;
+    left: 0;
+    width: 260px;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    /*around elements inside of overlay*/
+    overflow: visible;
+}
+
+/* specify formatting of the geocoder contained in the class "geocoder" */
+.geocoder {
+    position: relative;
+    margin: 10px 0 10px;
+}
+
+/* specify formatting of section including toggle and dropdown menu contained in the class "map-overlay-data" */
+.map-overlay-data {
+    position: relative;
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    width: 260px;
+    top: 0;
+    left: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    overflow: visible;
+}
+
+/* specify formatting of section including legend expand/collapse button contained in the class "legend-bar" */
+.legend-bar {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 3px;
+    bottom: 0px;
+    margin-bottom: 30px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width: 126px;
+    right: 10px;
+    z-index: 1;
+}
+
+/* specify formatting of the legend contained in the class "legend" */
+.legend {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 3px;
+    bottom: 40px;
+    margin-bottom: 30px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+/* specify formatting of the legend's h4 level text contained in the class "legend h4" */
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+/* specify formatting of the legend's 'keys' contained in the class "legend-key" */
+.legend-key {
+    display: inline-block;
+    border-radius: 0%;
+    height: 2px;  /*adjust height to make small horizontal lines*/
+    width: 10px; /*adjust width to make small horizontal lines*/
+    margin-right: 5px; /*position of lines*/
+}
+
+/* specify formatting of the toggle menu's 'keys' contained in the class "label-key" */
+.label-key {
+    display: inline-block;
+    border-radius: 50%; /*curve border to make circles*/
+    height: 10px; /*size of circles*/
+    width: 10px; /*size of circles*/
+    margin-right: 5px; /*position of circles*/
+}
+
