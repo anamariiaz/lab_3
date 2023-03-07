@@ -30,7 +30,7 @@ const geocoder = new MapboxGeocoder({
     countries: "ca" //limit searchable locations to being within Canada
 });
 
-//add geocoder to map by embedding it within HTML element with "geocoder" id (such that its map location and style is specified by the latter)
+//add geocoder to map by embedding it within HTML element with "geocoder" id (such that its map location and style is specified by the css of the latter)
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 //specify events triggered by the loading of the "map" variable
@@ -206,7 +206,7 @@ map.on('load', () => {
         id: 'bike_shops_unclustered',
         type: 'circle',
         source: 'bike_shops',
-        //only show circles when there is 1 bike shops within a radius of 50 at a given zoom level (or when zoom level >= max zoom level of clustering)
+        //only show circles when there is 1 bike shop within a radius of 50 at a given zoom level (or when zoom level >= max zoom level of clustering)
         filter: ['!', ['has', 'point_count']],
         paint: {
             'circle-color': '#FFB6C1',
@@ -296,7 +296,7 @@ map.on('load', () => {
     map.on('mousemove', 'bike', (e) => {
         //enter conditional if mouse hovers over at least one feature of the 'bike' layer
         if (e.features.length > 0) { 
-            //if bikeID IS NOT NULL - i.e. a feature was being hovered over immediately prior to another - set hover feature-state of the this feature back to false to reset its original opacity (before continuing to move and highlight the next hovered line)
+            //if bikeID IS NOT NULL - i.e. a feature was being hovered over immediately prior to another - set hover feature-state of this feature back to false to reset its original opacity (before continuing to move and highlight the next hovered line)
             if (bikeID !== null) { 
                 map.setFeatureState(
                     { source: 'bikeways', id: bikeID },
@@ -464,7 +464,7 @@ item_parking.appendChild(value_parking);
 //add 'item_parking' section into the HTML element assigned to 'label_parking' variable
 label_parking.appendChild(item_parking); 
 
-//assign 'label_shops variable to HTML element with 'label_shops' id
+//assign 'label_shops' variable to HTML element with 'label_shops' id
 const label_shops = document.getElementById('label_shops');
 //assign 'item_shops' variable to a created 'section'
 const item_shops = document.createElement('div');
