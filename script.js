@@ -11,7 +11,7 @@ const maxBounds = [
 const map = new mapboxgl.Map({
     container: 'map', //ID for div where map will be embedded in HTML file
     style: 'mapbox://styles/anamariiaz/clex3wjhx000z01o2bsd76rsn', //link to style URL
-    center: [-79.3, 43.765], //starting position [longitude, latitude]
+    center: [-79.3, 43.7], //starting position [longitude, latitude]
     zoom: 10, //starting zoom
     bearing: -17.7, //angle rotation of map
 	maxBounds: maxBounds //maximum and minimum scroll bounds
@@ -331,7 +331,7 @@ map.on('load', () => {
 document.getElementById('returnbutton').addEventListener('click', () => {
     //move the map view back to original state
     map.flyTo({
-        center: [-79.3, 43.765], //starting position [longitude, latitude]
+        center: [-79.3, 43.7], //starting position [longitude, latitude]
         zoom: 10, //starting zoom
         bearing: -17.7, //starting bearing
         essential: true
